@@ -1,0 +1,556 @@
+@charset "UTF-8";
+/*Стартовое модальное окно*/
+.modal_start {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(0%, black), color-stop(52%, #13004e));
+  background: linear-gradient(180deg, #020024 0%, black 0%, #13004e 52%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modal_start.noactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.textarea1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid #1237;
+  height: 40px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 5px 0 5px;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  background-color: #efd3ff;
+  margin: 10px;
+}
+
+.textarea1:focus {
+  border: 3px solid #13004e;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+  box-shadow: 0px 0px 10px 5px #ffffff;
+}
+
+.button_next1_start {
+  display: inline-block;
+  border: 3px solid #1237;
+  background-color: #efd3ff;
+  height: 30px;
+  width: 150px;
+  margin: 10px;
+  color: black;
+  font-weight: 600;
+  font-size: 21px;
+  text-align: center;
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+
+.button_next1_start:hover {
+  border: 3px solid #13004e;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
+  box-shadow: 0px 0px 10px 5px #ffffff;
+}
+
+.button_next1_start:active {
+  border: 3px solid #ffffff;
+  background-color: #1237;
+  color: #ffffff;
+}
+
+/*Модальное окно при отсутствии ответа*/
+.modal_noanswer {
+  width: 100%;
+  height: 100%;
+  background: #eeaeca;
+  background: -webkit-gradient(linear, left bottom, left top, from(#eeaeca), to(rgba(173, 4, 4, 0.1264880952)));
+  background: linear-gradient(0deg, #eeaeca 0%, rgba(173, 4, 4, 0.1264880952) 100%);
+  z-index: 10;
+  position: fixed;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal_noanswer.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal_noanswer_content {
+  padding: 10px;
+  background: #eeaeca;
+  background: -webkit-gradient(linear, left bottom, left top, from(#eeaeca), to(#ad0404));
+  background: linear-gradient(0deg, #eeaeca 0%, #ad0404 100%);
+  border: 3px solid #ad0404;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 100px 50px #ad0404;
+          box-shadow: 0px 0px 100px 50px #ad0404;
+  width: 400px;
+  margin: 15% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*Модальное окно при проигрыше*/
+.modal_over {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(0%, black), color-stop(52%, #13004e));
+  background: linear-gradient(180deg, #020024 0%, black 0%, #13004e 52%);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modal_over.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal_text_over {
+  padding: 10px;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+
+.modal_text_over1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+/*Модальное окно при выигрыше*/
+.modal_win {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(0%, black), color-stop(52%, #13004e));
+  background: linear-gradient(180deg, #020024 0%, black 0%, #13004e 52%);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.modal_win.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Стили главной кнопки*/
+.button_main {
+  padding: 3px;
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.button_main:hover {
+  background-color: #eeaeca;
+  -webkit-box-shadow: 0px 0px 10px 5px blueviolet;
+          box-shadow: 0px 0px 10px 5px blueviolet;
+}
+.button_main:active {
+  color: white;
+  background-color: black;
+  -webkit-box-shadow: 0px 0px 10px 5px green;
+          box-shadow: 0px 0px 10px 5px green;
+}
+
+.button_main_next.noactive, .button_50.noactive1, .button_1.noactive1, .button_google.noactive1 {
+  pointer-events: none;
+  background-color: darksalmon;
+}
+
+/*Стили кнопок подсказок*/
+.button_50.noactive, .button_1.noactive, .button_google.noactive {
+  pointer-events: none;
+  background-color: red;
+}
+
+.button_hints {
+  padding: 3px 5px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+}
+.button_hints:hover {
+  background-color: #eeaeca;
+  -webkit-box-shadow: 0px 0px 10px 5px blueviolet;
+          box-shadow: 0px 0px 10px 5px blueviolet;
+}
+.button_hints:active {
+  color: white;
+  background-color: black;
+  -webkit-box-shadow: 0px 0px 10px 5px green;
+          box-shadow: 0px 0px 10px 5px green;
+}
+
+/*Кнопка далее*/
+.button_next {
+  text-align: center;
+  margin: 15px;
+}
+
+/*Первый флекс-контейнер: таймер, имя, посдказки, количество вопросов, список номеров вопросов*/
+.flex_container1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex_container1-timer {
+  border: 5px solid white;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  color: white;
+  font-size: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_container1-hint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+.number_question {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+.fcont1_uname {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  max-width: 400px;
+}
+
+.fcont1_hints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hint1, .hint2, .hint3 {
+  padding: 5px;
+}
+
+.result_list {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: background-color 0.7s ease-in-out;
+  transition: background-color 0.7s ease-in-out;
+}
+
+.result_list.background {
+  background-color: #469e13;
+}
+
+.result_list_illuminated {
+  color: orangered;
+}
+
+/*Второй флекс-контейнер: вопросы*/
+.flex_container2 {
+  padding: 15px 0px 15px 0px;
+}
+
+.container_question {
+  border: 5px solid white;
+  border-radius: 15px;
+  padding: 3px;
+  width: 80%;
+  min-width: 400px;
+  min-height: 130px;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+/*Третий флекс-контейнер: варианты ответов*/
+.flex_container3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_container3 .correct {
+  color: white;
+  background-color: green;
+}
+
+.flex_container3 .wrong {
+  color: white;
+  background-color: red;
+}
+
+.flex_container3 .disabled {
+  pointer-events: none;
+}
+
+.answer_main {
+  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  color: white;
+  padding: 3px;
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.answer_main:hover {
+  background-color: blueviolet;
+  -webkit-box-shadow: 0px 0px 10px 5px blueviolet;
+          box-shadow: 0px 0px 10px 5px blueviolet;
+}
+
+.container_answer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cont_answ1-1 {
+  border: 5px solid white;
+  border-radius: 15px;
+  width: 400px;
+  min-height: 60px;
+  margin: 8px;
+}
+
+.cont_answ1-2 {
+  border: 5px solid white;
+  border-radius: 15px;
+  width: 400px;
+  min-height: 60px;
+  margin: 8px;
+}
+
+.container_answer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cont_answ1-3 {
+  border: 5px solid white;
+  border-radius: 15px;
+  width: 400px;
+  min-height: 60px;
+  margin: 8px;
+}
+
+.cont_answ1-4 {
+  border: 5px solid white;
+  border-radius: 15px;
+  width: 400px;
+  min-height: 60px;
+  margin: 8px;
+}
+
+body {
+  background: #020024;
+  background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(0%, black), color-stop(52%, #13004e));
+  background: linear-gradient(180deg, #020024 0%, black 0%, #13004e 52%);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*Основной контейнер главного окна*/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .flex_container1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .flex_container1-result {
+    display: none;
+  }
+}

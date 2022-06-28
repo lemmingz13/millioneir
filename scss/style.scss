@@ -1,0 +1,31 @@
+@import "style_modal_start.scss";
+@import "style_modal_noanswer.scss";
+@import "style_modal_lose.scss";
+@import "style_modal_win.scss";
+@import "style_button.scss";
+@import "style_flex_cont1.scss";
+@import "style_flex_cont2.scss";
+@import "style_flex_cont3.scss";
+
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(19,0,78,1) 52%);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*Основной контейнер главного окна*/
+
+.container {
+    display: flex;
+    flex-direction:column;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .flex_container1 {
+        flex-direction: column-reverse;
+    }
+    .flex_container1-result {
+        display: none;
+    }  
+}

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кто хочет стать js разработчиком?</title>
+    <link rel="stylesheet" href="css/stylezero.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/icon.png" type="image/x-icon">
+    <script type="module" src="./javascript/script.js"></script>
+</head>
+<body>
+    <div class="modal_start">
+        <h1>Добро пожаловать в онлайн-игру "Кто хочет стать js разработчиком?"</h1>
+        <h2>Для того, чтобы начать игру, введите Ваше имя и нажмите кнопку "Играть"</h2>
+        <div class="textarea">
+            <input type="text" name="name" id="user-name" class="textarea1">
+        </div>
+        <div class="button_next_start">          
+                <button class="button_next1_start" >Играть</button>   
+        </div>
+    </div>
+    <div class="modal_win" id="modal-win">
+        <div class="modal_win_content">
+            <p class="modal_text_over modal_text_over1">Вы выиграли!</p>
+            <div class="modal_text_over">Поздравляем, вы ответили правильно на все вопросы</div>
+            <div class="modal_text_over"> и заработали 1000000 рублей</div>
+            <div class="button_next">
+                <button id="btn_try_again1" class="button_main">Заново</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal_noanswer" id="modal-noanswer">
+        <div class="modal_noanswer_content">
+            <div class="modal_text_over">Необходимо выбрать вариант ответа</div>
+            <div class="button_next">
+                <button id="btn_noanswer" class="button_main">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal_over" id="modal-over">
+        <div class="modal_content">
+            <p class="modal_text_over modal_text_over1">Игра окончена!</p>
+            <div class="modal_text_over">Количество правильных ответов: <span id="number-of-question1"></span> из <span id="number-of-all-question1"></span></div>
+            <p class="modal_text_over">Вы заработали:
+                <span id="result-money"></span> рублей
+            </p>
+            <div class="button_next">
+                <button id="btn_try_again" class="button_main">Заново</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="flex_container1">
+            <div class="flex_container1-timer">
+                <span id="timer"></span>
+            </div>
+            <div class="flex_container1-hint">
+                <div class="fcont1_uname"><span id="user_name"></span></div>
+                <div class="number_question">
+                    Вопрос <span id="number-of-question"></span> из <span id="number-of-all-question"></span>
+                </div>
+                <div class="fcont1_hints">
+                    <div class="hint1"><button id="btn_hint_50" class="button_hints button_50">50 X 50</button></div>
+                    <div class="hint2"><button id="btn_hint_1" class="button_hints button_1">Убрать 1</button></div>
+                    <div class="hint3"><form action="https://www.google.com/" target="_blank"><button id="btn_hint_google" class="button_hints button_google">Помощь Гугла</button></form></div>
+                </div>
+            </div>
+            <div class="flex_container1-result">
+                <ul class="result_list_main">
+                    <li class="result_list result_list_illuminated">15  1000000</li>
+                    <li class="result_list">14  500000</li>
+                    <li class="result_list">13  250000</li>
+                    <li class="result_list">12  125000</li>
+                    <li class="result_list">11  64000</li>
+                    <li class="result_list result_list_illuminated">10  32000</li>
+                    <li class="result_list">9   16000</li>
+                    <li class="result_list">8   8000</li>
+                    <li class="result_list">7   4000</li>
+                    <li class="result_list">6   2000</li>
+                    <li class="result_list result_list_illuminated">5   1000</li>
+                    <li class="result_list">4   500</li>
+                    <li class="result_list">3   300</li>
+                    <li class="result_list">2   200</li>
+                    <li class="result_list">1   100</li>
+                    <li class="result_list"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex_container2">
+            <div class="container_question" id="question">
+                
+            </div>
+        </div>
+        <div class="flex_container3">
+            <div class="container_answer1">
+                <div class="cont_answ1-1 answer_main" data-id="0">
+            
+                </div>
+                <div class="cont_answ1-2 answer_main" data-id="1">
+                    
+                </div>
+            </div>
+            <div class="container_answer2">
+                <div class="cont_answ1-3 answer_main" data-id="2">
+                
+                </div>
+                <div class="cont_answ1-4 answer_main" data-id="3">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="flex_container4">
+            <div class="button_next">
+                <button id="btn_next" class="button_main button_main_next">Далее</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+/*Первый флекс-контейнер: таймер, имя, посдказки, количество вопросов, список номеров вопросов*/
+
+.flex_container1 {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.flex_container1-timer {
+    border: 5px solid white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.flex_container1-hint {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 5px;
+}
+.number_question {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 5px;
+}
+.fcont1_uname {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 400px;
+}
+.fcont1_hints {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.hint1, .hint2, .hint3 {
+    padding: 5px;
+}
+.result_list {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.7s ease-in-out;
+}
+.result_list.background {
+    background-color: rgb(70, 158, 19);
+}
+.result_list_illuminated {
+    color: orangered;
+}

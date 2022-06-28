@@ -1,0 +1,54 @@
+/*Стили главной кнопки*/
+
+.button_main {
+    padding: 3px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;   
+    &:hover {
+        background-color: rgb(238,174,202);
+        box-shadow: 0px 0px 10px 5px blueviolet;
+    }
+    &:active {
+        color:white;
+        background-color: black;
+        box-shadow: 0px 0px 10px 5px green;
+    }
+}
+.button_main_next.noactive, .button_50.noactive1, .button_1.noactive1, .button_google.noactive1 {
+    pointer-events: none;
+    background-color: darksalmon;
+}
+
+/*Стили кнопок подсказок*/
+
+.button_50.noactive, .button_1.noactive, .button_google.noactive {
+    pointer-events: none;
+    background-color: red;
+}
+.button_hints {
+    padding: 3px 5px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    &:hover{
+        background-color: rgb(238,174,202);
+        box-shadow: 0px 0px 10px 5px blueviolet;
+    }
+    &:active{
+        color:white;
+        background-color: black;
+        box-shadow: 0px 0px 10px 5px green;
+    }
+}
+/*Кнопка далее*/
+
+.button_next {
+    text-align: center;
+    margin: 15px;
+}
